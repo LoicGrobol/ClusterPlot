@@ -8,13 +8,22 @@ setup(
   description = 'Implementation of ClusterPlot paper',
   author = 'Or Malkai',
   author_email = 'ormalkai@gmail.com',
-  url = 'https://github.com/user/reponame',   # TODO
+  url = 'https://github.com/ormalkai/ClusterPlot',
   download_url = 'https://github.com/user/reponame/archive/v_01.tar.gz',    # TODO
   keywords = ['ClusterPlot', 'ClusterPlots', 'cluster', 'plot', 'ClustersPlot'],   # Keywords that define your package best
-  install_requires=[            # TODO
-          'validators',
-          'beautifulsoup4',
-      ],
+  install_requires=[
+    'numpy',
+    'pandas',
+    'umap-learn',
+    'alphashape',
+    'shapely',
+    'seaborn',
+    'imageio',
+    'matplotlib',
+    'sklearn',
+    'scipy',
+    'shapely',
+  ],
   classifiers=[
     'Development Status :: 4 - Beta',
     'Intended Audience :: Data Scientists, Researches, Developers',      # Define that your audience are developers

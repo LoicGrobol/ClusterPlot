@@ -1,6 +1,3 @@
-# TODO Split library code from code that uses the including utils functions and classes
-# TODO Examples only 3D and MNIST without sampling
-# TODO Readme
 # TODO Auto choose birch threshold
 # TODO Auto choose LOF
 # TODO pytest
@@ -97,7 +94,7 @@ class ClusterPlot:
                  mat_figsize: tuple = (14, 10), mat_annot_kws_size: int = 35, mat_label_size: int = 25,
                  main_plot_fig_size: tuple = (26, 13), show_anchors_annotation: bool = False,
                  vmax_overlap: float = 0.5, vmax_proximity: float = 0.5,
-                 annotate_images: bool = True, k_annot_clf: int = 40, orig_images: list = None,
+                 annotate_images: bool = False, k_annot_clf: int = 40, orig_images: list = None,
                  transpose_low_dim: bool = False):
         """
 
