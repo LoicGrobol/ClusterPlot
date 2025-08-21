@@ -1133,7 +1133,7 @@ class ClusterPlot:
 
         center = vor.points.mean(axis=0)
         if radius is None:
-            radius = vor.points.ptp().max()
+            radius = np.ptp(vor.points).max()
 
         # Construct a map containing all ridges for a given point
         all_ridges = {}
