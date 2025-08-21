@@ -9,7 +9,7 @@ dependencies = [
   "pandas",
   "umap-learn",
   "alphashape",
-  "shapely",
+  "shapely >= 2, < 3",
   "seaborn",
   "imageio",
   "llvmlite >= 0.43, < 0.45",

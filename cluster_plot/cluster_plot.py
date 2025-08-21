@@ -2308,8 +2308,8 @@ class ClusterPlot:
         if isinstance(alpha_shape, shapely.geometry.polygon.Polygon):
             alpha_shape = [alpha_shape]
         else:  # Multipolygon
-            alpha_shape = list(alpha_shape)
-        for shape in list(alpha_shape):
+            alpha_shape = list(alpha_shape.geoms)
+        for shape in alpha_shape:
             x, y = shape.exterior.coords.xy
             if not spline:
                 if vis:
