@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cluster-plot"
+dependencies = [
+  "numpy",
+  "pandas",
+  "umap-learn",
+  "alphashape",
+  "shapely",
+  "seaborn",
+  "imageio",
+  "llvmlite >= 0.43, < 0.45",
+  "matplotlib",
+  "numba >= 0.61, < 0.62",
+  "scikit-learn",
+  "scipy",
+  "shapely",
+]
+authors = [{ name = "Or Malkai", email = "ormalkai@gmail.com" }]
+description = "Implementation of ClusterPlot paper"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = ['ClusterPlot', 'ClusterPlots', 'cluster', 'plot', 'ClustersPlot']
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+version = "0.1"
+
+[tool.ruff]
+line-length = 100
+lint.select = [
+    "A",
+    "B",
+    "C90",
+    "E",
+    "F",
+    "N",
+    "NPY",
+    "PT",
+    "PTH",
+    "PYI",
+    "S",
+    "W",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = [
+    "S101", # asserts allowed in tests
+    "ARG",  # Unused function args -> fixtures nevertheless are functionally relevant
+]
+
+[tool.setuptools]
+packages = ["cluster_plot"]
+
+[tool.mypy]
+check_untyped_defs = true
+warn_unreachable = true
+plugins = ["numpy.typing.mypy_plugin"]
+
